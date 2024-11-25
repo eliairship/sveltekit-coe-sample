@@ -32,7 +32,9 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"@types/bun": "^1.1.13",
 		"@types/eslint": "^9.6.0",
+		"@types/jsonwebtoken": "^9.0.7",
 		"autoprefixer": "^10.4.20",
 		"drizzle-kit": "^0.22.0",
 		"eslint": "^9.7.0",
@@ -44,6 +46,7 @@
 		"prettier-plugin-tailwindcss": "^0.6.5",
 		"storybook": "^8.4.4",
 		"svelte": "^5.0.0",
+		"svelte-adapter-bun": "^0.5.2",
 		"svelte-check": "^4.0.0",
 		"tailwindcss": "^3.4.9",
 		"typescript": "^5.0.0",
@@ -57,7 +60,10 @@
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
-		"drizzle-orm": "^0.33.0"
+		"bun": "^1.1.36",
+		"drizzle-orm": "^0.33.0",
+		"jsonwebtoken": "^9.0.2",
+		"zod": "^3.23.8"
 	},
 	"packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
 }
