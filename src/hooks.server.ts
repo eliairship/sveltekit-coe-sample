@@ -9,6 +9,19 @@ const public_paths = [
   '/auth'
 ];
 
+
+// EXAMPLE `handleFetch`
+// export const handleFetch: HandleFetch = async ({ event, request, fetch }) => {
+//   const url = new URL(request.url);
+//   if (url.pathname.includes('auth') && !url.pathname.includes('me')) {
+//     return await fetch(request);
+//   }
+//   request.headers.set('Authorization', `Bearer ${event.locals.user.AccessToken}`);
+//   return await fetch(request);
+// };
+
+
+
 export const handleFetch = async ({ request, fetch }) => {
   const url = new URL(request.url);
 
