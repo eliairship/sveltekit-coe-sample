@@ -9,6 +9,15 @@ const public_paths = [
   '/auth'
 ];
 
+export const handleFetch = async ({ request, fetch }) => {
+  const url = new URL(request.url);
+
+
+  // if (isPublicPath(url.pathname)) {
+  return await fetch(request)
+  // }
+}
+
 // function to verify if the request path is inside the public_paths array
 function isPublicPath(path: string) {
   return public_paths.some(allowedPath =>

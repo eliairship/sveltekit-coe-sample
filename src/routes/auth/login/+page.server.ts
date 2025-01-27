@@ -7,7 +7,7 @@ import { eq } from 'drizzle-orm';
 import type { Actions, PageServerLoad } from './$types';
 import { client, clientID } from '../../../lib/auth/client'
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ params, fetch }) => {
   const { url } = await client.authorize(
     "http://localhost:5173/auth/callback",
     "code",
@@ -15,6 +15,7 @@ export const load: PageServerLoad = async () => {
 
   return { url }
 }
+
 export const actions = {
   login: async ({ cookies, request }) => {
     const data = await request.formData();
