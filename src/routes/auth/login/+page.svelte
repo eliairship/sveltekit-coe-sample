@@ -1,5 +1,6 @@
 <script lang="ts">
   	import type { PageData, ActionData } from './$types';
+    import {client, clientID} from '../../../lib/auth/client'
 
 
 	let { data, form }: { data: PageData, form: ActionData } = $props();
@@ -23,5 +24,6 @@
     <button>Log in</button>
     <button formaction="?/register">Register</button>
   </form>
+  <a href={data.url}>Login with Open Auth</a>
 
 </div>

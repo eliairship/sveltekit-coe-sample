@@ -4,8 +4,17 @@ import { user } from '$lib/server/db/schema';
 import { fail, redirect } from '@sveltejs/kit';
 import Bun from 'bun';
 import { eq } from 'drizzle-orm';
-import type { Actions } from './$types';
+import type { Actions, PageServerLoad } from './$types';
+import { client, clientID } from '../../../lib/auth/client'
 
+export const load: PageServerLoad = async () => {
+  const { url } = await client.authorize(
+    "http://localhost:5173/auth/callback",
+    "code",
+  )
+
+  return { url }
+}
 export const actions = {
   login: async ({ cookies, request }) => {
     const data = await request.formData();

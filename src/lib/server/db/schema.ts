@@ -5,3 +5,8 @@ export const user = sqliteTable('user', {
   email: text('email').unique().notNull(),
   password: text('password').notNull()
 });
+
+export const profile = sqliteTable('profile', {
+  id: integer('id').primaryKey(),
+  email: text('email').unique().notNull(),
+});
